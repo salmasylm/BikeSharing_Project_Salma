@@ -1,1 +1,1 @@
-https://bike-sharingproyek-dimas-mgshgrgkf5cg85pvzeyqgj.streamlit.app/
+https://bikesharing-project-salma.streamlit.app/
