@@ -103,7 +103,7 @@ weather_df         = replace_year(create_byweather_df(main_df))
 # ─────────────────────────────────────────────
 # HEADER
 # ─────────────────────────────────────────────
-st.header("Dashboard Study Case Bike Sharing")
+st.header("Studi Kasus Penggunaan Sepeda")
 
 # ─────────────────────────────────────────────
 # METRIC CARDS
