@@ -35,7 +35,7 @@ day_clean_df, hour_df = load_data()
 # SIDEBAR
 # ─────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("<h2 style='font-size:25px; font-weight:bold;'>Penggunaan Sepeda Tahun 2011 & 2012</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='font-size:25px; font-weight:bold;'>Analisis Data Penggunaan Sepeda</h2>", unsafe_allow_html=True)
 
     logo_path = os.path.join(BASE_DIR, "sepeda_foto.png")
     if os.path.exists(logo_path):
