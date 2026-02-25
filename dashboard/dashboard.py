@@ -254,7 +254,7 @@ with col_holiday:
     ax.set_ylabel("Jumlah")
     ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Libur")
-    ax.legend(title="Tahun", loc="upper right")
+    ax.legend(title="Tahun", loc="upper left")
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
     for container in ax.containers:
         for bar in container:
@@ -273,7 +273,7 @@ with col_workingday:
     ax.set_ylabel("Jumlah")
     ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Kerja")
-    ax.legend(title="Tahun", loc="upper right")
+    ax.legend(title="Tahun", loc="upper left")
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
     for container in ax.containers:
         for bar in container:
