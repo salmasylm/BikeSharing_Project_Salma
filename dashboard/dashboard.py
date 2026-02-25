@@ -149,7 +149,7 @@ st.pyplot(fig)
 
 with st.expander("**Bagaimana Kesimpulannya?**"):
     st.markdown("""
-    Jumlah pengguna *registered* jauh mendominasi dibandingkan pengguna *casual* di kedua tahun.
+    Jumlah pengguna *resmi* jauh mendominasi dibandingkan pengguna *tidak resmi* di kedua tahun.
     Hal ini menunjukkan bahwa layanan bike sharing lebih banyak digunakan oleh pelanggan tetap
     yang memiliki pola penggunaan rutin, seperti para pekerja komuter. Kedua segmen pengguna
     mengalami pertumbuhan dari 2011 ke 2012.
