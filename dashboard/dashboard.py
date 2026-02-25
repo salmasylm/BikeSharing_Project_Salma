@@ -123,7 +123,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # 1. CASUAL vs REGISTERED PER TAHUN
 # ─────────────────────────────────────────────
-st.subheader("Perbandingan Pengguna Casual vs Registered per Tahun")
+st.subheader("Perbandingan Pengguna Casual vs Registered per Tahun 👇")
 
 fig, ax = plt.subplots(figsize=(8, 5))
 x     = np.arange(len(casual_register_df))
