@@ -324,7 +324,11 @@ ax.legend(title="Tahun", loc="upper right")
 ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
 bars_all = [patch for patch in ax.patches if patch.get_height() > 0]
 for bar in bars_all:
-    ax.text(bar.get_x() + bar.get_width(
+    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
+            f"{bar.get_height():,.0f}", ha="center", va="bottom",
+            fontsize=8, color=bar.get_facecolor(), fontweight="bold")
+plt.tight_layout()
+st.pyplot(fig)
 
 with st.expander("**Bagaimana Kesimpulannya?**"):
     st.markdown("""
