@@ -149,7 +149,7 @@ st.pyplot(fig)
 
 with st.expander("**Bagaimana Kesimpulannya?**"):
     st.markdown("""
-    Jumlah pengguna *resmi* jauh mendominasi dibandingkan pengguna *tidak resmi* di kedua tahun.
+    Jumlah pengguna *resmi* jauh mendominasi dibandingkan pengguna *tidak* di kedua tahun.
     Hal ini menunjukkan bahwa layanan bike sharing lebih banyak digunakan oleh pelanggan tetap
     yang memiliki pola penggunaan rutin, seperti para pekerja komuter. Kedua segmen pengguna
     mengalami pertumbuhan dari 2011 ke 2012.
@@ -218,7 +218,7 @@ season_df["season"] = season_df["season"].map(season_mapping)
 st.subheader("Trend Penyewaan Sepeda Berdasarkan Musim")
 
 fig, ax = plt.subplots(figsize=(9, 5))
-sns.barplot(data=season_df, x="Musim", y="cnt", hue="yr",
+sns.barplot(data=season_df, x="season", y="cnt", hue="yr",
             palette="bright", ax=ax)
 ax.set_ylabel("Jumlah")
 ax.set_title("Jumlah Total Sepeda yang Disewakan Berdasarkan Musim")
