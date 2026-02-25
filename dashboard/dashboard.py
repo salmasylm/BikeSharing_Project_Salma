@@ -218,7 +218,7 @@ season_df["season"] = season_df["season"].map(season_mapping)
 st.subheader("Trend Penyewaan Sepeda Berdasarkan Musim")
 
 fig, ax = plt.subplots(figsize=(9, 5))
-sns.barplot(data=season_df, x="season", y="cnt", hue="yr",
+sns.barplot(data=season_df, x="Musim", y="cnt", hue="yr",
             palette="bright", ax=ax)
 ax.set_ylabel("Jumlah")
 ax.set_title("Jumlah Total Sepeda yang Disewakan Berdasarkan Musim")
