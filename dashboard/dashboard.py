@@ -320,7 +320,7 @@ sns.barplot(data=weather_df, x="weathersit", y="cnt", hue="yr",
 ax.set_xlabel("Kondisi Cuaca")
 ax.set_ylabel("Jumlah")
 ax.set_title("Jumlah Total Sepeda yang Disewakan Berdasarkan Kondisi Cuaca")
-ax.legend(title="Tahun", loc="upper right")
+ax.legend(title="Tahun", loc="upper left")
 ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
 bars_all = [patch for patch in ax.patches if patch.get_height() > 0]
 for bar in bars_all:
