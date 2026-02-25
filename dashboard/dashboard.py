@@ -11,8 +11,8 @@ import streamlit as st
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Set plot style
-plt.rcParams['figure.facecolor'] = 'pink'
-plt.rcParams['axes.facecolor']   = 'lightgray'
+plt.rcParams['figure.facecolor'] = 'white'
+plt.rcParams['axes.facecolor']   = 'white'
 plt.rcParams['text.color']       = 'black'
 plt.rcParams['axes.labelcolor']  = 'black'
 plt.rcParams['xtick.color']      = 'black'
