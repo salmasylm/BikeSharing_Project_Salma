@@ -223,8 +223,14 @@ sns.barplot(data=season_df, x="season", y="cnt", hue="yr",
 ax.set_ylabel("Jumlah")
 ax.set_title("Jumlah Total Sepeda yang Disewakan Berdasarkan Musim")
 ax.legend(title="Tahun", loc="upper right")
-for container in ax.containers:
-    ax.bar_label(container, fontsize=8, color="white", weight="bold", label_type="edge")
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
+
+# Ambil warna bar otomatis dari patch
+bars_all = [patch for patch in ax.patches if patch.get_height() > 0]
+for bar in bars_all:
+    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
+            f"{bar.get_height():,.0f}", ha="center", va="bottom",
+            fontsize=8, color=bar.get_facecolor(), fontweight="bold")
 plt.tight_layout()
 st.pyplot(fig)
 
