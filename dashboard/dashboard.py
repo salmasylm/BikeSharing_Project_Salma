@@ -261,8 +261,8 @@ with col_holiday:
     ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Libur")
     ax.legend(title="Tahun", loc="upper left")
-    ax.set_ylim(0, 2000000)
-    ax.set_yticks(range(0, 2200000, 200000))
+    ax.set_ylim(0, 2200000)
+    ax.set_yticks(range(0, 2400000, 200000))
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
     for bar in [p for p in ax.patches if p.get_height() > 0]:
         ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
