@@ -248,41 +248,52 @@ col_holiday, col_workingday = st.columns(2)
 with col_holiday:
     fig, ax = plt.subplots(figsize=(5, 4))
     plot_df = holiday_df.copy()
-    plot_df["holiday"] = plot_df["holiday"].map({0: "Non-Holiday", 1: "Holiday"})
+    plot_df["holiday"] = plot_df["holiday"].map({0: "Hari Biasa", 1: "Tanggal Merah"})
     sns.barplot(data=plot_df, x="holiday", y="cnt", hue="yr",
                 palette="bright", ax=ax)
     ax.set_ylabel("Jumlah")
+    ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Libur")
     ax.legend(title="Tahun", loc="upper right")
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
     for container in ax.containers:
-        ax.bar_label(container, fontsize=7, color="white", weight="bold", label_type="edge")
+        for bar in container:
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
+                    f"{bar.get_height():,.0f}", ha="center", va="bottom",
+                    fontsize=7, fontweight="bold")
     plt.tight_layout()
     st.pyplot(fig)
 
 with col_workingday:
     fig, ax = plt.subplots(figsize=(5, 4))
     plot_df = workingday_df.copy()
-    plot_df["workingday"] = plot_df["workingday"].map({0: "Weekends", 1: "Weekdays"})
+    plot_df["workingday"] = plot_df["workingday"].map({0: "Hari Libur", 1: "Hari Kerja"})
     sns.barplot(data=plot_df, x="workingday", y="cnt", hue="yr",
                 palette="bright", ax=ax)
     ax.set_ylabel("Jumlah")
+    ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Kerja")
     ax.legend(title="Tahun", loc="upper right")
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
     for container in ax.containers:
-        ax.bar_label(container, fontsize=7, color="white", weight="bold", label_type="edge")
+        for bar in container:
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
+                    f"{bar.get_height():,.0f}", ha="center", va="bottom",
+                    fontsize=7, fontweight="bold")
     plt.tight_layout()
     st.pyplot(fig)
 
 with st.expander("**Bagaimana Kesimpulannya?**"):
     st.markdown("""
-    Jumlah total penyewaan sepeda lebih tinggi pada hari kerja (weekdays) dibandingkan akhir pekan
-    (weekends) di kedua tahun. Pada hari kerja tahun kedua, total penyewaan melonjak signifikan
+    Jumlah total penyewaan sepeda lebih tinggi pada hari kerja dibandingkan hari libur
+    di kedua tahun. Pada hari kerja tahun kedua, total penyewaan melonjak signifikan
     hingga melewati angka **1,4 juta**, hampir dua kali lipat dari capaian tahun sebelumnya.
     Dominasi volume pada hari kerja memperkuat indikasi bahwa penggunaan sepeda didorong oleh
     kebutuhan transportasi komuter rutin.
     """)
 
 st.markdown("---")
+
 
 # ─────────────────────────────────────────────
 # 6. BERDASARKAN CUACA
