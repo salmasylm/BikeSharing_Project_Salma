@@ -261,12 +261,13 @@ with col_holiday:
     ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Libur")
     ax.legend(title="Tahun", loc="upper left")
+    ax.set_ylim(0, 2000000)
+    ax.set_yticks(range(0, 2200000, 200000))
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
-    for container in ax.containers:
-        for bar in container:
-            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
-                    f"{bar.get_height():,.0f}", ha="center", va="bottom",
-                    fontsize=7, fontweight="bold")
+    for bar in [p for p in ax.patches if p.get_height() > 0]:
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
+                f"{bar.get_height():,.0f}", ha="center", va="bottom",
+                fontsize=7, color=bar.get_facecolor(), fontweight="bold")
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -280,12 +281,13 @@ with col_workingday:
     ax.set_xlabel("")
     ax.set_title("Berdasarkan Hari Kerja")
     ax.legend(title="Tahun", loc="upper left")
+    ax.set_ylim(0, 2000000)
+    ax.set_yticks(range(0, 2200000, 200000))
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
-    for container in ax.containers:
-        for bar in container:
-            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
-                    f"{bar.get_height():,.0f}", ha="center", va="bottom",
-                    fontsize=7, fontweight="bold")
+    for bar in [p for p in ax.patches if p.get_height() > 0]:
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 3000,
+                f"{bar.get_height():,.0f}", ha="center", va="bottom",
+                fontsize=7, color=bar.get_facecolor(), fontweight="bold")
     plt.tight_layout()
     st.pyplot(fig)
 
