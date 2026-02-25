@@ -222,7 +222,7 @@ sns.barplot(data=season_df, x="season", y="cnt", hue="yr",
             palette="bright", ax=ax)
 ax.set_ylabel("Jumlah")
 ax.set_title("Jumlah Total Sepeda yang Disewakan Berdasarkan Musim")
-ax.legend(title="Tahun", loc="upper right")
+ax.legend(title="Tahun", loc="upper left")
 ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
 
 # Ambil warna bar otomatis dari patch
