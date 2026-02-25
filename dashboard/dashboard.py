@@ -35,7 +35,7 @@ day_clean_df, hour_df = load_data()
 # SIDEBAR
 # ─────────────────────────────────────────────
 with st.sidebar:
-    st.subheader("### **ANALISIS DATA SEPEDA TAHUN 2011 DAN 2012**")
+    st.subheader("**ANALISIS DATA SEPEDA TAHUN 2011 DAN 2012**")
 
     logo_path = os.path.join(BASE_DIR, "sepeda_foto.png")
     if os.path.exists(logo_path):
