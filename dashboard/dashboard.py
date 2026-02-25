@@ -11,8 +11,8 @@ import streamlit as st
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Set plot style
-plt.rcParams['figure.facecolor'] = 'lightgray'
-plt.rcParams['axes.facecolor']   = 'lightgray'
+plt.rcParams['figure.facecolor'] = 'white'
+plt.rcParams['axes.facecolor']   = 'white'
 plt.rcParams['text.color']       = 'black'
 plt.rcParams['axes.labelcolor']  = 'black'
 plt.rcParams['xtick.color']      = 'black'
@@ -35,7 +35,7 @@ day_clean_df, hour_df = load_data()
 # SIDEBAR
 # ─────────────────────────────────────────────
 with st.sidebar:
-    st.subheader("Hi! Selamat Datang di Proyek Analisa Bike Sharing")
+    st.subheader("## **ANALISIS DATA SEPEDA PADA TAHUN 2011 DAN 2012**")
 
     logo_path = os.path.join(BASE_DIR, "sepeda_foto.png")
     if os.path.exists(logo_path):
