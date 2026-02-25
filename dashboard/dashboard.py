@@ -103,7 +103,7 @@ weather_df         = replace_year(create_byweather_df(main_df))
 # ─────────────────────────────────────────────
 # HEADER
 # ─────────────────────────────────────────────
-st.header("Dashboard Study Case Bike Sharing 🚴")
+st.header("Dashboard Study Case Bike Sharing")
 
 # ─────────────────────────────────────────────
 # METRIC CARDS
@@ -153,7 +153,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # 2. TREND BULANAN
 # ─────────────────────────────────────────────
-st.subheader("Trend Pola Total Penyewaan Sepeda Setiap Tahun 👇")
+st.subheader("Trend Pola Total Penyewaan Sepeda Setiap Tahun")
 
 fig, ax = plt.subplots(figsize=(10, 5))
 sns.lineplot(data=monthly_df, x="mnth", y="cnt", hue="yr",
@@ -179,7 +179,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # 3. TREND PER JAM
 # ─────────────────────────────────────────────
-st.subheader("Trend Penyewaan Sepeda Berdasarkan Jam 👇")
+st.subheader("Trend Penyewaan Sepeda Berdasarkan Jam")
 
 fig, ax = plt.subplots(figsize=(12, 5))
 sns.lineplot(data=hourly_df, x="hr", y="cnt", hue="yr",
@@ -208,7 +208,7 @@ st.markdown("---")
 season_mapping = {1: "Musim Dingin", 2: "Musim Semi", 3: "Musim Panas", 4: "Musim Gugur"}
 season_df["season"] = season_df["season"].map(season_mapping)
 
-st.subheader("Trend Penyewaan Sepeda Berdasarkan Musim 👇")
+st.subheader("Trend Penyewaan Sepeda Berdasarkan Musim")
 
 fig, ax = plt.subplots(figsize=(9, 5))
 sns.barplot(data=season_df, x="season", y="cnt", hue="yr",
@@ -234,7 +234,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # 5. HARI LIBUR & HARI KERJA
 # ─────────────────────────────────────────────
-st.subheader("Trend Penyewaan Sepeda Berdasarkan Hari Libur dan Hari Kerja 👇")
+st.subheader("Trend Penyewaan Sepeda Berdasarkan Hari Libur dan Hari Kerja")
 
 col_holiday, col_workingday = st.columns(2)
 
@@ -288,7 +288,7 @@ weather_mapping = {
 }
 weather_df["weathersit"] = weather_df["weathersit"].map(weather_mapping)
 
-st.subheader("Trend Penyewaan Sepeda Berdasarkan Cuaca 👇")
+st.subheader("Trend Penyewaan Sepeda Berdasarkan Cuaca")
 
 fig, ax = plt.subplots(figsize=(10, 5))
 sns.barplot(data=weather_df, x="weathersit", y="cnt", hue="yr",
@@ -315,7 +315,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # KESIMPULAN AKHIR
 # ─────────────────────────────────────────────
-st.subheader("📌 Kesimpulan Akhir")
+st.subheader("Kesimpulan Akhir")
 st.info("""
 Bisnis penyewaan sepeda mengalami pertumbuhan pesat dengan volume penyewaan pada tahun kedua yang jauh melampaui tahun pertama di semua kategori waktu. Pola penggunaan didominasi oleh aktivitas komuter
 pada hari kerja dengan puncak kepadatan di jam berangkat
