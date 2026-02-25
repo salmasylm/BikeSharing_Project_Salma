@@ -12,4 +12,4 @@ Bike sharing Dashboard ini dibuat untuk menyelesaikan tugas dari Proyek Akhir Be
 streamlit run dashboard.py (Lewat Lokal)
 
 ## Streamlit Cloud 
-Link Streamlit Secara otomatis: https://bike-sharingproyek-dimas-mgshgrgkf5cg85pvzeyqgj.streamlit.app/
+Link Streamlit Secara otomatis: [https://bikesharingproject-salma.streamlit.app/]
