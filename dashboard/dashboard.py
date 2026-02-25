@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-import matplotlib.ticker as mticker
 
 # ─────────────────────────────────────────────
 # CONFIG & PATH
@@ -12,8 +11,8 @@ import matplotlib.ticker as mticker
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Set plot style
-plt.rcParams['figure.facecolor'] = 'white'
-plt.rcParams['axes.facecolor']   = 'white'
+plt.rcParams['figure.facecolor'] = 'lightgray'
+plt.rcParams['axes.facecolor']   = 'lightgray'
 plt.rcParams['text.color']       = 'black'
 plt.rcParams['axes.labelcolor']  = 'black'
 plt.rcParams['xtick.color']      = 'black'
@@ -36,7 +35,7 @@ day_clean_df, hour_df = load_data()
 # SIDEBAR
 # ─────────────────────────────────────────────
 with st.sidebar:
-    st.subheader("Selamat Datang di Proyek Analisa Bike Sharing!")
+    st.subheader("Hi! Selamat Datang di Proyek Analisa Bike Sharing")
 
     logo_path = os.path.join(BASE_DIR, "sepeda_foto.png")
     if os.path.exists(logo_path):
@@ -123,7 +122,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # 1. CASUAL vs REGISTERED PER TAHUN
 # ─────────────────────────────────────────────
-t.subheader("Perbandingan Pengguna Casual vs Registered per Tahun")
+st.subheader("Perbandingan Pengguna Casual vs Registered per Tahun")
 
 fig, ax = plt.subplots(figsize=(8, 5))
 x      = np.arange(len(casual_register_df))
@@ -318,10 +317,5 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 st.subheader("Kesimpulan Akhir")
 st.info("""
-Bisnis penyewaan sepeda mengalami pertumbuhan pesat dengan volume penyewaan pada tahun kedua yang jauh melampaui tahun pertama di semua kategori waktu. Pola penggunaan didominasi oleh aktivitas komuter
-pada hari kerja dengan puncak kepadatan di jam berangkat
-dan pulang kantor. Selain faktor rutinitas kerja, minat
-penyewaan juga sangat dipengaruhi oleh faktor musim
-di mana permintaan mencapai titik tertinggi pada periode
-pertengahan hingga menjelang akhir tahun.
+Bisnis penyewaan sepeda mengalami pertumbuhan pesat dengan volume penyewaan pada tahun kedua yang jauh melampaui tahun pertama di semua kategori waktu. Pola penggunaan didominasi oleh aktivitas komuter pada hari kerja dengan puncak kepadatan di jam berangkat dan pulang kantor. Selain faktor rutinitas kerja, minat penyewaan juga sangat dipengaruhi oleh faktor musim di mana permintaan mencapai titik tertinggi pada periode pertengahan hingga menjelang akhir tahun.
 """)
