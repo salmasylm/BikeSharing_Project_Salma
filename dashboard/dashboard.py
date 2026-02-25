@@ -114,8 +114,8 @@ total_register = main_df["registered"].sum()
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Total Penyewaan",   f"{total_rentals:,}")
-col2.metric("Pengguna Casual",   f"{total_casual:,}")
-col3.metric("Pengguna Registered", f"{total_register:,}")
+col2.metric("Pengguna Tidak Resmi",   f"{total_casual:,}")
+col3.metric("Pengguna Resmi", f"{total_register:,}")
 
 st.markdown("---")
 
