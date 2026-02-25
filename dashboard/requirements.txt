@@ -1,0 +1,8 @@
+cat > dashboard/requirements.txt << 'EOF'
+streamlit
+pandas
+matplotlib
+seaborn
+numpy
+pyarrow==17.0.0
+EOF
