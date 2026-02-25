@@ -1,0 +1,6 @@
+streamlit
+pandas
+matplotlib
+seaborn
+numpy
+pyarrow==17.0.0
