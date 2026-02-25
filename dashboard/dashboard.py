@@ -133,7 +133,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(casual_register_df["yr"])
 ax.set_xlabel("Tahun")
 ax.set_ylabel("Jumlah")
-ax.set_title("Total Pengguna Casual vs Registered per Tahun")
+ax.set_title("Total Pengguna Resmi vs Tidak Resmi (Tahun)")
 ax.legend()
 ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
 for bar in bars1:
