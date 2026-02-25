@@ -35,7 +35,7 @@ day_clean_df, hour_df = load_data()
 # SIDEBAR
 # ─────────────────────────────────────────────
 with st.sidebar:
-    st.subheader("Hi! Selamat Datang di Proyek Analisa Bike Sharing 🦸")
+    st.subheader("Selamat Datang di Proyek Analisa Bike Sharing!")
 
     logo_path = os.path.join(BASE_DIR, "sepeda_foto.png")
     if os.path.exists(logo_path):
@@ -122,7 +122,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 # 1. CASUAL vs REGISTERED PER TAHUN
 # ─────────────────────────────────────────────
-st.subheader("Perbandingan Pengguna Casual vs Registered per Tahun 👇")
+st.subheader("Perbandingan Pengguna Casual vs Registered per Tahun")
 
 fig, ax = plt.subplots(figsize=(8, 5))
 x      = np.arange(len(casual_register_df))
