@@ -317,5 +317,10 @@ st.markdown("---")
 # ─────────────────────────────────────────────
 st.subheader("📌 Kesimpulan Akhir")
 st.info("""
-Bisnis penyewaan sepeda mengalami pertumbuhan pesat dengan volume penyewaan pada tahun kedua yang jauh melampaui tahun pertama di semua kategori waktu. Pola penggunaan didominasi oleh aktivitas komuter pada hari kerja dengan puncak kepadatan di jam berangkat dan pulang kantor. Selain faktor rutinitas kerja, minat penyewaan juga sangat dipengaruhi oleh faktor musim di mana permintaan mencapai titik tertinggi pada periode pertengahan hingga menjelang akhir tahun.
+Bisnis penyewaan sepeda mengalami pertumbuhan pesat dengan volume penyewaan pada tahun kedua yang jauh melampaui tahun pertama di semua kategori waktu. Pola penggunaan didominasi oleh aktivitas komuter
+pada hari kerja dengan puncak kepadatan di jam berangkat
+dan pulang kantor. Selain faktor rutinitas kerja, minat
+penyewaan juga sangat dipengaruhi oleh faktor musim
+di mana permintaan mencapai titik tertinggi pada periode
+pertengahan hingga menjelang akhir tahun.
 """)
