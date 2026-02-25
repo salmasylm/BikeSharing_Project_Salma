@@ -127,7 +127,7 @@ st.subheader("Perbandingan Pengguna Casual vs Registered per Tahun")
 fig, ax = plt.subplots(figsize=(8, 5))
 x      = np.arange(len(casual_register_df))
 width  = 0.35
-bars1  = ax.bar(x - width/2, casual_register_df["total_casual"],    width, label="Casual",     color="#FF6347")
+bars1  = ax.bar(x - width/2, casual_register_df["total_casual"],     width, label="Casual",     color="#FF6347")
 bars2  = ax.bar(x + width/2, casual_register_df["total_registered"], width, label="Registered", color="#4682B4")
 ax.set_xticks(x)
 ax.set_xticklabels(casual_register_df["yr"])
@@ -135,8 +135,15 @@ ax.set_xlabel("Tahun")
 ax.set_ylabel("Jumlah")
 ax.set_title("Total Pengguna Casual vs Registered per Tahun")
 ax.legend()
-ax.bar_label(bars1, fmt="%,.0f", fontsize=7, color="white", weight="bold", label_type="edge")
-ax.bar_label(bars2, fmt="%,.0f", fontsize=7, color="white", weight="bold", label_type="edge")
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, _: f"{val:,.0f}"))
+for bar in bars1:
+    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 5000,
+            f"{bar.get_height():,.0f}", ha="center", va="bottom",
+            fontsize=7, color="#FF6347", fontweight="bold")
+for bar in bars2:
+    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 5000,
+            f"{bar.get_height():,.0f}", ha="center", va="bottom",
+            fontsize=7, color="#4682B4", fontweight="bold")
 plt.tight_layout()
 st.pyplot(fig)
 
